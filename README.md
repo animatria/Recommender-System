@@ -1,2 +1,2 @@
 # Recommender-System
-A simple recommender system that recommends books to users based on their preferences
+A simple recommendation system that recommends books based on user preferences
