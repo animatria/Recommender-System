@@ -99,17 +99,49 @@ print(users.head(5))
 3       4           porto, v.n.gaia, portugal  17.0
 4       5  farnborough, hants, united kingdom   NaN
 
-#Code
+#Code for printing the bar chart corresponding to distribution of ratings
 
 plt.rc("font", size=15)
 ratings.bookRating.value_counts(sort=False).plot(kind='bar')
 plt.title('Distribution of Ratings\n')
 plt.xlabel('Rating')
 plt.ylabel('Count')
-plt.savefig('system1.png', bbox_inches='tight')
+plt.savefig('chart1.png', bbox_inches='tight')
 plt.show()
 
 #Output: Bar Chart
+
+#Code for printing chart corresponding to age distribution
+
+As per the chart the most active users are among the age 20-30
+
+users.Age.hist(bins=[0, 10, 20, 30, 40, 50, 100])
+plt.title('Age Distribution\n')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.savefig('chart.png', bbox_inches='tight')
+plt.show()
+
+#Output: Age distibution chart
+
+Recommendations based on Correlations
+
+To ensure statistical significance, users with less than 200 ratings, and books with less than 100 ratings are excluded.
+
+counts1 = ratings['userID'].value_counts()
+ratings = ratings[ratings['userID'].isin(counts1[counts1 >= 200].index)]
+counts = ratings['bookRating'].value_counts()
+ratings = ratings[ratings['bookRating'].isin(counts[counts >= 100].index)]
+
+Convert the table to a 2D matrix.
+
+ratings_pivot = ratings.pivot(index='userID', columns='ISBN').bookRating
+userID = ratings_pivot.index
+ISBN = ratings_pivot.columns
+print(ratings_pivot.shape)
+ratings_pivot.head()
+
+
 
 
 
