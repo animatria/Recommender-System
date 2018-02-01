@@ -18,10 +18,83 @@ print(ratings.shape)
 print(list(ratings.columns))
 print(ratings.head(5))
 
+#Output
+
+>>> print(ratings.shape)
+(1149780, 3)
+>>> print(list(ratings.columns))
+['userID', 'ISBN', 'bookRating']
+>>> print(ratings.head(5))
+   userID        ISBN  bookRating
+0  276725  034545104X           0
+1  276726  0155061224           5
+2  276727  0446520802           0
+3  276729  052165615X           3
+4  276729  0521795028           6
+
+#Code
+
 print(books.shape)
 print(list(books.columns))
 print(books.head(5))
 
+#output
+
+>>> print(books.shape)
+(271360, 8)
+>>> print(list(books.columns))
+['ISBN', 'bookTitle', 'bookAuthor', 'yearOfPublication', 'publisher', 'imageUrlS', 'imageUrlM', 'imageUrlL']
+>>> print(books.head(5))
+         ISBN                                          bookTitle  \
+0  0195153448                                Classical Mythology   
+1  0002005018                                       Clara Callan   
+2  0060973129                               Decision in Normandy   
+3  0374157065  Flu: The Story of the Great Influenza Pandemic...   
+4  0393045218                             The Mummies of Urumchi   
+
+             bookAuthor yearOfPublication                   publisher  \
+0    Mark P. O. Morford              2002     Oxford University Press   
+1  Richard Bruce Wright              2001       HarperFlamingo Canada   
+2          Carlo D'Este              1991             HarperPerennial   
+3      Gina Bari Kolata              1999        Farrar Straus Giroux   
+4       E. J. W. Barber              1999  W. W. Norton &amp; Company   
+
+                                           imageUrlS  \
+0  http://images.amazon.com/images/P/0195153448.0...   
+1  http://images.amazon.com/images/P/0002005018.0...   
+2  http://images.amazon.com/images/P/0060973129.0...   
+3  http://images.amazon.com/images/P/0374157065.0...   
+4  http://images.amazon.com/images/P/0393045218.0...   
+
+                                           imageUrlM  \
+0  http://images.amazon.com/images/P/0195153448.0...   
+1  http://images.amazon.com/images/P/0002005018.0...   
+2  http://images.amazon.com/images/P/0060973129.0...   
+3  http://images.amazon.com/images/P/0374157065.0...   
+4  http://images.amazon.com/images/P/0393045218.0...   
+
+                                           imageUrlL  
+0  http://images.amazon.com/images/P/0195153448.0...  
+1  http://images.amazon.com/images/P/0002005018.0...  
+2  http://images.amazon.com/images/P/0060973129.0...  
+3  http://images.amazon.com/images/P/0374157065.0...  
+4  http://images.amazon.com/images/P/0393045218.0...  
+
+#Code
 print(users.shape)
 print(list(users.columns))
 print(users.head(5))
+
+#Output
+
+>>> print(users.shape)
+(278858, 3)
+>>> print(list(users.columns))
+['userID', 'Location', 'Age']
+>>> print(users.head(5))
+   userID                            Location   Age
+0       1                  nyc, new york, usa   NaN
+1       2           stockton, california, usa  18.0
+2       3     moscow, yukon territory, russia   NaN
+3       4           porto, v.n.gaia, portugal  17.0
+4       5  farnborough, hants, united kingdom   NaN
