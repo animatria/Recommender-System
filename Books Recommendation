@@ -98,3 +98,18 @@ print(users.head(5))
 2       3     moscow, yukon territory, russia   NaN
 3       4           porto, v.n.gaia, portugal  17.0
 4       5  farnborough, hants, united kingdom   NaN
+
+#Code
+
+plt.rc("font", size=15)
+ratings.bookRating.value_counts(sort=False).plot(kind='bar')
+plt.title('Distribution of Ratings\n')
+plt.xlabel('Rating')
+plt.ylabel('Count')
+plt.savefig('system1.png', bbox_inches='tight')
+plt.show()
+
+#Output
+
+ 
+
